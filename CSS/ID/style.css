@@ -1,0 +1,43 @@
+/* ==========================
+   ESTILO GENERAL DEL SITIO
+   ========================== */
+
+#pagina{
+    background-color:#7B3FA0;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    margin:0;
+    padding:20px;
+}
+
+
+/* ==========================
+   ENCABEZADO
+   ========================== */
+
+#titulo{
+    text-align:center;
+    letter-spacing:1px;
+}
+
+
+/* ==========================
+   NAVEGACIÓN
+   ========================== */
+
+#menu{
+    background-color:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:8px;
+}
+
+
+/* ==========================
+   CONTENIDO PRINCIPAL
+   ========================== */
+
+#contenido{
+    max-width:900px;
+    margin:auto;
+}

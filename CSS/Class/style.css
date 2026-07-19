@@ -1,0 +1,38 @@
+/* estilo general */
+.pagina{
+background-color:#7B3FA0;
+color:white;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.6;
+padding:20px;
+}
+
+/* título */
+.titulo{
+text-align:center;
+letter-spacing:1px;
+}
+
+/* navegación */
+.menu{
+background-color:rgba(255,255,255,0.15);
+padding:15px;
+border-radius:8px;
+}
+
+/* contenido principal */
+.contenido{
+max-width:900px;
+margin:auto;
+}
+
+/* secciones */
+.seccion{
+margin-bottom:30px;
+}
+
+/* imágenes */
+.logo img{
+display:block;
+margin:auto;
+}

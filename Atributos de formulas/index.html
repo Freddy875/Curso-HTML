@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario con Atributos</title>
+
+<script>
+/* Habilita cartilla y deshabilita embarazo */
+function seleccionarHombre(){
+    document.getElementById("cartilla").disabled = false;
+    document.getElementById("embarazo").disabled = true;
+}
+
+/* Habilita embarazo y deshabilita cartilla */
+function seleccionarMujer(){
+    document.getElementById("embarazo").disabled = false;
+    document.getElementById("cartilla").disabled = true;
+}
+</script>
+
+</head>
+<body>
+
+<h1>Formulario de Inscripción</h1>
+
+<form>
+
+<fieldset>
+<legend>Datos Personales</legend>
+
+<!-- Campo nombre con placeholder, autofocus y required -->
+<label>Nombre:</label>
+<input type="text" placeholder="Escribe tu nombre" autofocus required>
+
+<br><br>
+
+<!-- Campo usuario con maxlength -->
+<label>Usuario:</label>
+<input type="text" maxlength="10" placeholder="Máx 10 caracteres" required>
+
+<br><br>
+
+<!-- Campo edad con min y max -->
+<label>Edad:</label>
+<input type="number" min="18" max="65" required>
+
+<br><br>
+
+<!-- Campo con step -->
+<label>Número de boletos:</label>
+<input type="number" min="0" step="2" placeholder="De 2 en 2">
+
+<br><br>
+
+<!-- Campo correo con validación -->
+<label>Correo electrónico:</label>
+<input type="email" placeholder="ejemplo@gmail.com" required>
+
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>Sexo</legend>
+
+<!-- Radio Hombre -->
+<input type="radio" name="sexo" onclick="seleccionarHombre()">
+<label>Hombre</label>
+
+<br>
+
+<!-- Radio Mujer -->
+<input type="radio" name="sexo" onclick="seleccionarMujer()">
+<label>Mujer</label>
+
+<br><br>
+
+<!-- Campo exclusivo hombres -->
+<label>Cartilla militar (solo hombres):</label>
+<input type="text" id="cartilla" disabled>
+
+<br><br>
+
+<!-- Campo exclusivo mujeres -->
+<label>¿Está embarazada? (solo mujeres):</label>
+<input type="text" id="embarazo" disabled>
+
+</fieldset>
+
+<br>
+
+<fieldset>
+<legend>Otros Datos</legend>
+
+<!-- Campo comentario -->
+<label>Comentario:</label>
+<input type="text" placeholder="Escribe un comentario">
+
+</fieldset>
+
+<br>
+
+<!-- Botón enviar -->
+<input type="submit" value="Enviar">
+
+<!-- Botón limpiar -->
+<input type="reset" value="Limpiar">
+
+</form>
+
+</body>
+</html>

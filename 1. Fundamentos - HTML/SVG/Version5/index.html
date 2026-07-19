@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Figuras SVG reutilizadas</title>
+</head>
+
+<body>
+
+<h1>Figuras SVG reutilizadas con use</h1>
+
+<svg width="0" height="0">
+<defs>
+
+<!-- FIGURAS BASE -->
+
+<circle id="circulo" cx="60" cy="60" r="40"/>
+
+<rect id="cuadrado" x="20" y="20" width="80" height="80"/>
+
+<rect id="rectangulo" x="20" y="30" width="120" height="60"/>
+
+<ellipse id="elipse" cx="80" cy="60" rx="60" ry="35"/>
+
+<polygon id="triangulo" points="70,20 120,100 20,100"/>
+
+<line id="linea" x1="20" y1="60" x2="140" y2="60"/>
+
+
+<!-- MITAD AZUL MITAD ROJO -->
+
+<linearGradient id="mitad">
+<stop offset="50%" stop-color="blue"/>
+<stop offset="50%" stop-color="red"/>
+</linearGradient>
+
+<!-- DEGRADADO -->
+
+<linearGradient id="degradado" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="blue"/>
+<stop offset="100%" stop-color="red"/>
+</linearGradient>
+
+</defs>
+</svg>
+
+<!-- ===================== -->
+<!-- MITAD Y MITAD -->
+<!-- ===================== -->
+
+<h2>Mitad azul y mitad rojo</h2>
+
+<ul>
+
+<li>Círculo</li>
+<svg width="120" height="120">
+<use href="#circulo" fill="url(#mitad)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Cuadrado</li>
+<svg width="120" height="120">
+<use href="#cuadrado" fill="url(#mitad)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Rectángulo</li>
+<svg width="160" height="120">
+<use href="#rectangulo" fill="url(#mitad)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Elipse</li>
+<svg width="160" height="120">
+<use href="#elipse" fill="url(#mitad)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Línea</li>
+<svg width="160" height="120">
+<use href="#linea" stroke="black" stroke-width="4"/>
+</svg>
+
+<li>Triángulo</li>
+<svg width="140" height="120">
+<use href="#triangulo" fill="url(#mitad)" stroke="black" stroke-width="3"/>
+</svg>
+
+</ul>
+
+<!-- ===================== -->
+<!-- DEGRADADO -->
+<!-- ===================== -->
+
+<h2>Color degradado</h2>
+
+<ul>
+
+<li>Círculo</li>
+<svg width="120" height="120">
+<use href="#circulo" fill="url(#degradado)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Cuadrado</li>
+<svg width="120" height="120">
+<use href="#cuadrado" fill="url(#degradado)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Rectángulo</li>
+<svg width="160" height="120">
+<use href="#rectangulo" fill="url(#degradado)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Elipse</li>
+<svg width="160" height="120">
+<use href="#elipse" fill="url(#degradado)" stroke="black" stroke-width="3"/>
+</svg>
+
+<li>Línea</li>
+<svg width="160" height="120">
+<use href="#linea" stroke="black" stroke-width="4"/>
+</svg>
+
+<li>Triángulo</li>
+<svg width="140" height="120">
+<use href="#triangulo" fill="url(#degradado)" stroke="black" stroke-width="3"/>
+</svg>
+
+</ul>
+
+</body>
+</html>
